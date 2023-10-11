@@ -30,7 +30,7 @@ int Person::fib(int n){
 		return n;
 	}
 	else {
-		return fib(n - 1) + fib(n - 2) 
+		return fib(n - 1) + fib(n - 2);
 	}
 }
 
