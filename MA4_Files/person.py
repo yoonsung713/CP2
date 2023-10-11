@@ -25,5 +25,5 @@ class Person(object):
 	def __del__(self):
 		return lib.Person_delete(self.obj)
 	
-	def fib(self, n):
-		lib.Person_fib(self.obj, n)
+	def fib(self):
+		lib.Person_fib(self.obj)
