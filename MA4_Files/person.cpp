@@ -6,10 +6,11 @@ class Person{
 		Person(int);
 		int get();
 		void set(int);
-		int fib(int);
+		int fib();
 	private:
 		int age;
 		int n;
+		int _fib(int);
 	};
  
 Person::Person(int n){
@@ -24,8 +25,11 @@ void Person::set(int n){
 	age = n;
 	}
 
+int Person::fib(){
+	return _fib(age);
+}
 
-int Person::fib(int n){
+int Person::_fib(int n){
 	if (n <= 1) {
 		return n;
 	}
