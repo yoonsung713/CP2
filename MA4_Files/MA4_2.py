@@ -10,7 +10,7 @@ def fib_numba(n):
 	if n <= 1:
 		return n
 	else:
-		return(fib_numba(n-1) + fib_numba(n-2))
+		return njit(fib_numba(n-1) + fib_numba(n-2))
 	
 def fib_py(n):
 	if n <= 1:
