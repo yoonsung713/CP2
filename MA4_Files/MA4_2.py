@@ -31,7 +31,7 @@ def main():
 	# print(start - end)
 	# print(end - end2)
 	# print(f.fib())
-	ns = list(range(30, 46))  # Values of n from 30 to 45
+	ns = list(range(20, 31))  # Values of n from 30 to 45
 	py_times = []
 	numba_times = []
 	cpp_times = []
