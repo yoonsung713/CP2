@@ -19,8 +19,8 @@ def fib_py(n):
 		return(fib_py(n-1) + fib_py(n-2))
 
 def main():
-	f = Person(5)
-	start = pc()
+	# f = Person(5)
+	# start = pc()
 	# print(f.get())
 	# f.set(7)
 	# print(f.get())
@@ -60,7 +60,7 @@ def main():
 	plt.xlabel("n")
 	plt.ylabel("Time (seconds)")
 	plt.legend()
-	#plt.savefig("fibonacci_performance.png")
+	plt.savefig("fibonacci_performance.png")
 	plt.close()
 
 
