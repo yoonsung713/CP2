@@ -34,7 +34,7 @@ def main():
 	# print(end - end2)
 	# print(f.fib())
 	n_4 = list(range(30, 35))  # Values of n from 30 to 45
-	f = Person(n)
+	f = Person(3)
 	py_times = []
 	numba_times = []
 	cpp_times = []
