@@ -44,17 +44,20 @@ def main():
 		fib_py(n)
 		end = pc()
 		py_times.append(end - start)
+		print(py_times)
 		
 		start = pc()
 		fib_numba(n)
 		end = pc()
 		numba_times.append(end - start)
+		print(numba_times)
 		
 		f.set(n)
 		start = pc()
 		f.fib()
 		end = pc()
 		cpp_times.append(end - start)
+		print(cpp_times)
 
 	plt.figure()
 	plt.plot(n_4, py_times, label="Python")
