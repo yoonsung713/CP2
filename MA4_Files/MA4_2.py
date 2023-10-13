@@ -64,9 +64,9 @@ def main():
 	plt.close()
 
 	n_5 = list(range(20, 31))  # Values of n from 30 to 45
-	py_times = []
-	numba_times = []
-	cpp_times = []
+	py_times2 = []
+	numba_times2 = []
+	cpp_times2 = []
 
 	for n in n_5:
 		start = pc()
@@ -86,9 +86,9 @@ def main():
 		cpp_times.append(end - start)
 
 	plt.figure()
-	plt.plot(n_5, py_times, label="Python")
-	plt.plot(n_5, numba_times, label="Numba")
-	plt.plot(n_5, cpp_times, label="C++")
+	plt.plot(n_5, py_times2, label="Python")
+	plt.plot(n_5, numba_times2, label="Numba")
+	plt.plot(n_5, cpp_times2, label="C++")
 	plt.xlabel("n")
 	plt.ylabel("Time")
 	plt.legend()
