@@ -33,7 +33,7 @@ def main():
 	# print(start - end)
 	# print(end - end2)
 	# print(f.fib())
-	n_4 = list(range(30, 35))  # Values of n from 30 to 45
+	n_4 = list(range(30, 46))  # Values of n from 30 to 45
 	f = Person(3)
 	py_times = []
 	numba_times = []
@@ -69,7 +69,6 @@ def main():
 	n_5 = list(range(20, 31))  # Values of n from 30 to 45
 	py_times2 = []
 	numba_times2 = []
-	cpp_times2 = []
 
 	for n in n_5:
 		start = pc()
@@ -81,17 +80,10 @@ def main():
 		fib_numba(n)
 		end = pc()
 		numba_times2.append(end - start)
-		
-		f.set(n)
-		start = pc()
-		f.fib()
-		end = pc()
-		cpp_times2.append(end - start)
 
 	plt.figure()
 	plt.plot(n_5, py_times2, label="Python")
 	plt.plot(n_5, numba_times2, label="Numba")
-	plt.plot(n_5, cpp_times2, label="C++")
 	plt.xlabel("n")
 	plt.ylabel("seconds")
 	plt.legend()
