@@ -1,3 +1,12 @@
+""" MA4
+
+Student: Yoonsung Jung
+Mail: yoonsung.jung.3285@student.uu.se
+Reviewed by: Ema Duljkovic
+Date reviewed: 2023.10.13
+"""
+
+
 
 '''
 리스트 안에 있으면 plot하기 쉬움. 랜덤 수 생성해서 x**2 + y**2 < 1이면 
@@ -14,7 +23,7 @@ y_lst = []
 x_inside = []
 y_inside = []
 
-for _ in range(n[2]):
+for _ in range(n[0]):
     x = random.uniform(-1, 1)
     y = random.uniform(-1, 1)
     x_lst.append(x)
@@ -25,7 +34,7 @@ for _ in range(n[2]):
         y_inside.append(y)
 
 print(f'points that are inside the circle: {len(x_lst)}')
-print(f'approximation: {(4*len(x_inside)/n[2])}')
+print(f'approximation: {(4*len(x_inside)/n[0])}')
 print(f'math.pi: {math.pi}')
 
 plt.scatter(x_lst, y_lst, c='b')
