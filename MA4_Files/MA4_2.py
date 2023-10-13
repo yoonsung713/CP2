@@ -31,12 +31,12 @@ def main():
 	# print(start - end)
 	# print(end - end2)
 	# print(f.fib())
-	ns = list(range(20, 31))  # Values of n from 30 to 45
+	n_4 = list(range(30, 45))  # Values of n from 30 to 45
 	py_times = []
 	numba_times = []
 	cpp_times = []
 
-	for n in ns:
+	for n in n_4:
 		start = pc()
 		fib_py(n)
 		end = pc()
@@ -54,15 +54,49 @@ def main():
 		cpp_times.append(end - start)
 
 	plt.figure()
-	plt.plot(ns, py_times, label="Python")
-	plt.plot(ns, numba_times, label="Numba")
-	plt.plot(ns, cpp_times, label="C++")
+	plt.plot(n_4, py_times, label="Python")
+	plt.plot(n_4, numba_times, label="Numba")
+	plt.plot(n_4, cpp_times, label="C++")
 	plt.xlabel("n")
 	plt.ylabel("Time (seconds)")
 	plt.legend()
-	plt.savefig("fibonacci_performance.png")
+	plt.savefig("py_numba_cpp.png")
 	plt.close()
 
+	n_5 = list(range(20, 31))  # Values of n from 30 to 45
+	py_times = []
+	numba_times = []
+	cpp_times = []
+
+	for n in n_5:
+		start = pc()
+		fib_py(n)
+		end = pc()
+		py_times.append(end - start)
+		
+		start = pc()
+		fib_numba(n)
+		end = pc()
+		numba_times.append(end - start)
+		
+		f = Person(n)
+		start = pc()
+		f.fib()
+		end = pc()
+		cpp_times.append(end - start)
+
+	plt.figure()
+	plt.plot(n_5, py_times, label="Python")
+	plt.plot(n_5, numba_times, label="Numba")
+	plt.plot(n_5, cpp_times, label="C++")
+	plt.xlabel("n")
+	plt.ylabel("Time (seconds)")
+	plt.legend()
+	plt.savefig("py_numba.png")
+	plt.close()
+
+	f = Person(47)
+	print(f"if n = 47 -> numba: {fib_numba(47)}, cpp: {f.fib()}")
 
 if __name__ == '__main__':
 	main()
