@@ -33,7 +33,7 @@ def main():
 	# print(start - end)
 	# print(end - end2)
 	# print(f.fib())
-	n_4 = list(range(30, 46))  # Values of n from 30 to 45
+	n_4 = list(range(30, 45))  # Values of n from 30 to 45
 	f = Person(3)
 	py_times = []
 	numba_times = []
@@ -66,7 +66,7 @@ def main():
 	plt.savefig("py_numba_cpp.png")
 	plt.close()
 
-	n_5 = list(range(20, 31))  # Values of n from 30 to 45
+	n_5 = list(range(20, 30))  # Values of n from 20 to 30
 	py_times2 = []
 	numba_times2 = []
 
@@ -92,6 +92,9 @@ def main():
 
 	f.set(47)
 	print(f"if n = 47 -> numba: {fib_numba(47)}, cpp: {f.fib()}")
+	'''
+	The reason why cpp is negative is because it is out of the int range of cpp
+	'''
 
 if __name__ == '__main__':
 	main()
